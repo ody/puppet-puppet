@@ -45,9 +45,8 @@ class puppet::server (
     $enc                = '',
     $enc_exec           = '',
     $monitor_server = hiera('puppet_server_monitor', 'true'),
-  ) {
+) inherits puppet {
 
-  include puppet
   include puppet::params
 
   # ---
